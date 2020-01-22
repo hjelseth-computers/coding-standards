@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Hjelseth Computers Docs" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/squizlabs/PHP_CodeSniffer/master/phpcs.xsd">
+
+	<description>Hjelseth Computers Coding Standards for Inline Documentation and Comments</description>
+
+	<rule ref="Squiz.Commenting">
+		<!-- Excluded to allow /* translators: ... */ comments -->
+		<exclude name="Squiz.Commenting.BlockComment.SingleLine"/>
+		<!-- Exclude to allow "one liner" inline doc block -->
+		<exclude name="Squiz.Commenting.BlockComment.WrongStart"/>
+		<!-- Do not require empty line after comments -->
+		<exclude name="Squiz.Commenting.BlockComment.NoEmptyLineAfter"/>
+		<!-- Allow other comment styles for block comments (example: default Laravel config comments) -->
+		<exclude name="Squiz.Commenting.BlockComment.NoNewLine"/>
+
+		<!-- Prefer indicating @since, @package, @subpackage etc in class comments -->
+		<exclude name="Squiz.Commenting.ClassComment.TagNotAllowed"/>
+
+		<!-- Do not require //end ... for classes and functions -->
+		<exclude name="Squiz.Commenting.ClosingDeclarationComment.Missing"/>
+
+		<!-- Exclude as it conflicts with PSR12 -->
+		<exclude name="Squiz.Commenting.FileComment.SpacingAfterOpen"/>
+		<!-- Do not require a @author value for Squiz -->
+		<exclude name="Squiz.Commenting.FileComment.IncorrectAuthor"/>
+		<!-- Do not require a @copyright value for Squiz -->
+		<exclude name="Squiz.Commenting.FileComment.IncorrectCopyright"/>
+		<!-- Do not require a @author tags -->
+		<exclude name="Squiz.Commenting.FileComment.MissingAuthorTag"/>
+		<!-- Do not require a @subpackage tags -->
+		<exclude name="Squiz.Commenting.FileComment.MissingSubpackageTag"/>
+		<!-- Do not require a @copyright tags -->
+		<exclude name="Squiz.Commenting.FileComment.MissingCopyrightTag"/>
+		<!-- Use a different prefered order of tags -->
+		<exclude name="Squiz.Commenting.FileComment.PackageTagOrder"/>
+		<!-- Use a different prefered order of tags -->
+		<exclude name="Squiz.Commenting.FileComment.SubpackageTagOrder"/>
+		<!-- WP has a different prefered order of tags -->
+		<exclude name="Squiz.Commenting.FileComment.AuthorTagOrder"/>
+
+		<!-- Do not require param comment -->
+		<exclude name="Squiz.Commenting.FunctionComment.MissingParamComment"/>
+		<!-- Prefer int and bool instead of integer and boolean -->
+		<exclude name="Squiz.Commenting.FunctionComment.IncorrectParamVarName"/>
+		<!-- Prefer int and bool instead of integer and boolean -->
+		<exclude name="Squiz.Commenting.FunctionComment.InvalidReturn"/>
+
+		<!-- Allow empty inline comments -->
+		<exclude name="Squiz.Commenting.InlineComment.Empty"/>
+		<!-- Exclude to allow inline doc block -->
+		<exclude name="Squiz.Commenting.InlineComment.DocBlock"/>
+		<!-- Do not require inline comments to end with full stop "." -->
+		<exclude name="Squiz.Commenting.InlineComment.InvalidEndChar"/>
+		<!-- Do not require empty line after inline comment -->
+		<exclude name="Squiz.Commenting.InlineComment.SpacingAfter"/>
+
+		<!-- Do not require //end comments  -->
+		<exclude name="Squiz.Commenting.LongConditionClosingComment.Missing"/>
+
+		<!-- Not in Inline Docs standard, and needed to bypass WPCS checks -->
+		<exclude name="Squiz.Commenting.PostStatementComment"/>
+
+		<!-- Prefer int and bool instead of integer and boolean -->
+		<exclude name="Squiz.Commenting.VariableComment.IncorrectVarType"/>
+	</rule>
+
+	<rule ref="Generic.Commenting.DocComment">
+		<!-- No required alignment of tag values -->
+		<exclude name="Generic.Commenting.DocComment.TagValueIndent"/>
+		<!-- No required order of tags -->
+		<exclude name="Generic.Commenting.DocComment.ParamNotFirst"/>
+		<!-- Excluded to allow param documentation for arrays  -->
+		<exclude name="Generic.Commenting.DocComment.ParamGroup"/>
+		<!-- Excluded to allow param documentation for arrays  -->
+		<exclude name="Generic.Commenting.DocComment.TagsNotGrouped"/>
+		<!-- Exclude to allow duplicate Wp hooks to be documented -->
+		<exclude name="Generic.Commenting.DocComment.ContentAfterOpen"/>
+		<!-- Exclude to allow duplicate Wp hooks to be documented -->
+		<exclude name="Generic.Commenting.DocComment.SpacingBeforeShort"/>
+		<!-- Exclude to allow duplicate Wp hooks to be documented -->
+		<exclude name="Generic.Commenting.DocComment.ContentBeforeClose"/>
+		<!-- Exclude to allow short one liner doc comments -->
+		<exclude name="Generic.Commenting.DocComment.MissingShort"/>
+		<!-- Disable requirement of short description starting with capital letter -->
+		<exclude name="Generic.Commenting.DocComment.ShortNotCapital"/>
+		<!-- Disable requirement of long description starting with capital letter -->
+		<exclude name="Generic.Commenting.DocComment.LongNotCapital"/>
+	</rule>
+</ruleset>
