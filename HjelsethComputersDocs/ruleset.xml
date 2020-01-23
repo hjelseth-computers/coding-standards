@@ -112,6 +112,8 @@
 		<exclude name="Symfony.Commenting.ClassComment.WrongStyle"/>
 		<!-- License/file block is not required. -->
 		<exclude name="Symfony.Commenting.License.Warning"/>
+		<!-- This is handled by Generic.Commenting.DocComment.NonParamGroup instead -->
+		<exclude name="Symfony.Commenting.Annotations.Invalid"/>
 	</rule>
 
 	<rule ref="SlevomatCodingStandard.TypeHints.LongTypeHints" />
