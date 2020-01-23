@@ -15,16 +15,24 @@
 
 		<!-- Prefer indicating @since, @package, @subpackage etc in class comments -->
 		<exclude name="Squiz.Commenting.ClassComment.TagNotAllowed"/>
+		<!-- Class doc block is not required -->
+		<exclude name="Squiz.Commenting.ClassComment.Missing"/>
+		<!-- Class comments style are not enforced. -->
+		<exclude name="Squiz.Commenting.ClassComment.WrongStyle"/>
 
 		<!-- Do not require //end ... for classes and functions -->
 		<exclude name="Squiz.Commenting.ClosingDeclarationComment.Missing"/>
 
 		<!-- Exclude as it conflicts with PSR12 -->
 		<exclude name="Squiz.Commenting.FileComment.SpacingAfterOpen"/>
-		<!-- Do not require a @author value for Squiz -->
+		<!-- Do not require a @author tag in file comment -->
 		<exclude name="Squiz.Commenting.FileComment.IncorrectAuthor"/>
-		<!-- Do not require a @copyright value for Squiz -->
+		<!-- Do not require a @copyright tag in file comment -->
 		<exclude name="Squiz.Commenting.FileComment.IncorrectCopyright"/>
+		<!-- Do not require a @package tag in file comment -->
+		<exclude name="Squiz.Commenting.FileComment.MissingPackageTag"/>
+		<!-- Do not require file comment -->
+		<exclude name="Squiz.Commenting.FileComment.Missing"/>
 		<!-- Do not require a @author tags -->
 		<exclude name="Squiz.Commenting.FileComment.MissingAuthorTag"/>
 		<!-- Do not require a @subpackage tags -->
@@ -44,6 +52,8 @@
 		<exclude name="Squiz.Commenting.FunctionComment.IncorrectParamVarName"/>
 		<!-- Prefer int and bool instead of integer and boolean -->
 		<exclude name="Squiz.Commenting.FunctionComment.InvalidReturn"/>
+		<!-- Do not enforce comment for @throws tag in function comment -->
+		<exclude name="Squiz.Commenting.FunctionComment.EmptyThrows"/>
 
 		<!-- Allow empty inline comments -->
 		<exclude name="Squiz.Commenting.InlineComment.Empty"/>
@@ -53,6 +63,8 @@
 		<exclude name="Squiz.Commenting.InlineComment.InvalidEndChar"/>
 		<!-- Do not require empty line after inline comment -->
 		<exclude name="Squiz.Commenting.InlineComment.SpacingAfter"/>
+		<!-- Disable requirement of inline comment to start with capital letter -->
+		<exclude name="Squiz.Commenting.InlineComment.NotCapital"/>
 
 		<!-- Do not require //end comments  -->
 		<exclude name="Squiz.Commenting.LongConditionClosingComment.Missing"/>
@@ -85,5 +97,20 @@
 		<exclude name="Generic.Commenting.DocComment.ShortNotCapital"/>
 		<!-- Disable requirement of long description starting with capital letter -->
 		<exclude name="Generic.Commenting.DocComment.LongNotCapital"/>
+	</rule>
+
+	<rule ref="Symfony.Commenting">
+		<!-- Parameter comment is not required. -->
+		<exclude name="Symfony.Commenting.FunctionComment.MissingParamComment"/>
+		<!-- Not needed as it overlaps with Squiz.Commenting.FunctionComment.Missing -->
+		<exclude name="Symfony.Commenting.FunctionComment.Missing"/>
+		<!-- Not needed as it overlaps with Squiz.Commenting.FunctionComment.SpacingAfterParamType -->
+		<exclude name="Symfony.Commenting.FunctionComment.SpacingAfterParamType"/>
+		<!-- Class comments are not required. -->
+		<exclude name="Symfony.Commenting.ClassComment.Missing"/>
+		<!-- Class comments style are not enforced. -->
+		<exclude name="Symfony.Commenting.ClassComment.WrongStyle"/>
+		<!-- License/file block is not required. -->
+		<exclude name="Symfony.Commenting.License.Warning"/>
 	</rule>
 </ruleset>
