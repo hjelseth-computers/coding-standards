@@ -113,4 +113,6 @@
 		<!-- License/file block is not required. -->
 		<exclude name="Symfony.Commenting.License.Warning"/>
 	</rule>
+
+	<rule ref="SlevomatCodingStandard.TypeHints.LongTypeHints" />
 </ruleset>
