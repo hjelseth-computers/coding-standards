@@ -10,6 +10,8 @@
 		"php": ">=7.2",
 		"squizlabs/php_codesniffer": "^3.5",
 		"escapestudios/symfony2-coding-standard": "^3.11"
+	"suggest": {
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.5.0 || This Composer plugin will sort out the PHPCS 'installed_paths' automatically."
 	},
 	"minimum-stability": "dev",
 	"prefer-stable": true
