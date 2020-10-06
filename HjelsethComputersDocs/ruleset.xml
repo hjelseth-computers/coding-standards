@@ -54,6 +54,8 @@
 		<exclude name="Squiz.Commenting.FunctionComment.InvalidReturn"/>
 		<!-- Do not enforce comment for @throws tag in function comment -->
 		<exclude name="Squiz.Commenting.FunctionComment.EmptyThrows"/>
+		<!-- Not needed. -->
+		<exclude name="Squiz.Commenting.FunctionComment.ParamCommentNotCapital"/>
 
 		<!-- Allow empty inline comments -->
 		<exclude name="Squiz.Commenting.InlineComment.Empty"/>
