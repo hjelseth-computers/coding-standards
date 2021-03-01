@@ -56,6 +56,8 @@
 		<exclude name="Squiz.Commenting.FunctionComment.EmptyThrows"/>
 		<!-- Not needed. -->
 		<exclude name="Squiz.Commenting.FunctionComment.ParamCommentNotCapital"/>
+		<!-- Not needed. -->
+		<exclude name="Squiz.Commenting.FunctionComment.ParamCommentFullStop"/>
 
 		<!-- Allow empty inline comments -->
 		<exclude name="Squiz.Commenting.InlineComment.Empty"/>
