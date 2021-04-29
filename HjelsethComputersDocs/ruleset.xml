@@ -46,6 +46,8 @@
 		<!-- WP has a different prefered order of tags -->
 		<exclude name="Squiz.Commenting.FileComment.AuthorTagOrder"/>
 
+		<!-- Do not require doc block -->
+		<exclude name="Squiz.Commenting.FunctionComment.Missing"/>
 		<!-- Do not require param comment -->
 		<exclude name="Squiz.Commenting.FunctionComment.MissingParamComment"/>
 		<!-- Prefer int and bool instead of integer and boolean -->
@@ -58,6 +60,10 @@
 		<exclude name="Squiz.Commenting.FunctionComment.ParamCommentNotCapital"/>
 		<!-- Not needed. -->
 		<exclude name="Squiz.Commenting.FunctionComment.ParamCommentFullStop"/>
+		<!-- Not needed. -->
+		<exclude name="Squiz.Commenting.FunctionComment.ParamCommentFullStop"/>
+		<!-- Not needed. -->
+		<exclude name="Squiz.Commenting.FunctionComment.SpacingAfterParamType"/>
 
 		<!-- Allow empty inline comments -->
 		<exclude name="Squiz.Commenting.InlineComment.Empty"/>
@@ -108,7 +114,7 @@
 		<exclude name="Symfony.Commenting.FunctionComment.MissingParamComment"/>
 		<!-- Not needed as it overlaps with Squiz.Commenting.FunctionComment.Missing -->
 		<exclude name="Symfony.Commenting.FunctionComment.Missing"/>
-		<!-- Not needed as it overlaps with Squiz.Commenting.FunctionComment.SpacingAfterParamType -->
+		<!-- Not needed. -->
 		<exclude name="Symfony.Commenting.FunctionComment.SpacingAfterParamType"/>
 		<!-- Class comments are not required. -->
 		<exclude name="Symfony.Commenting.ClassComment.Missing"/>
